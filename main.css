@@ -1,0 +1,85 @@
+.container-clock {
+    max-width: 1000px;
+    height: 600px;
+    background-color: rgb(209, 144, 155);
+    border: 10px solid rgb(159, 63, 63);
+    border-radius: 15px;
+    margin: 0 auto;
+    position: relative;
+}
+.second {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: none;
+    border: 4px solid grey;
+    border-radius: 50%;
+    top: 150px;
+    right: 130px;
+}
+.second::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 155px;
+    border-right: 7px solid rgb(255, 132, 0);
+    right: 50%;
+    bottom: 50%;
+    transform: rotate(360deg);
+    transform-origin: right bottom;
+    animation: loadSeconds 60s infinite;
+}
+.second::before {
+    content: '';
+    width: 300px;
+    height: 300px;
+    background: none;
+    border-top: 5px solid rgb(87, 87, 159);
+    border-right: 5px solid rgb(4, 4, 19);
+    border-bottom: 5px solid red;
+    border-left: 5px solid green;
+    /* border: 5px solid rgb(87, 87, 159); */
+    border-radius: 100%;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+}
+.minute {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: none;
+    border: 8px solid grey;
+    border-radius: 50%;
+    top: 170px;
+    right: 150px;
+}
+.hoursMain {
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+    top: 265px;
+    right: 225px;
+    z-index: 5;
+}
+.monthDay {
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    top: 285px;
+    left: 230px;
+}
+.weekDay {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 245px;
+    left: 230px;
+}
+canvas {
+    width: 650px;
+    border: 1px solid black;
+}
+
